@@ -19,8 +19,10 @@ using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 namespace MapperAPI.Controllers
 {
     [ApiController]
-    //  [Route("api/Projects")]
+    // [Route("api/Projects")]
+
     [Route("[controller]")]
+
     [RequireHttpsAttribute]
     public class PlanViewProjectsController : ControllerBase 
     {
