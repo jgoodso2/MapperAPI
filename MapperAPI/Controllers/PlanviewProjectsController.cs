@@ -19,9 +19,9 @@ using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 namespace MapperAPI.Controllers
 {
     [ApiController]
-     //[Route("api/Projects")]
+     [Route("api/Projects")]
 
-    [Route("[controller]")]
+    //[Route("[controller]")]
 
     [RequireHttpsAttribute]
     public class PlanViewProjectsController : ControllerBase 
@@ -58,6 +58,10 @@ namespace MapperAPI.Controllers
         public IActionResult GetAuthorizedPlanViewProjects()
         {
             var authorizedProjectEntities = _ProjectInfoRepository.GetAuthorizedPlanViewProjects();
+            if(authorizedProjectEntities.Count() ==0)
+            {
+                return Ok(new List<AuthorizedPlanViewProjectDto>());
+            }
             var results = _mapper.Map<IEnumerable<AuthorizedPlanViewProjectDto>>(authorizedProjectEntities);
 
             return Ok(results);
