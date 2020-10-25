@@ -37,13 +37,14 @@ namespace MapperAPI
                 opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
            .EnableSensitiveDataLogging());
             //add controllers
-            services.AddControllers();
+            services.AddControllersWithViews();
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped<IProjectInfoRepository, ProjectInfoRepository>();
+            
             //Mapper.AssertConfigurationIsValid();
 
-            services.AddDbContext<MapperAPIContextboo>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MapperAPIContextboo")));
+            //services.AddDbContext<MapperAPIContextboo>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("MapperAPIContextboo")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +66,10 @@ namespace MapperAPI
             {
                 endpoints.MapControllers();
             });
+
+            
+
+            
         }
     }
 }
