@@ -67,9 +67,7 @@ namespace MapperAPI
                 endpoints.MapControllers();
             });
 
-            
 
-            
         }
     }
 }

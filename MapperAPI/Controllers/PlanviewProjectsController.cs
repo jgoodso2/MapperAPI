@@ -39,6 +39,7 @@ namespace MapperAPI.Controllers
             _logger = logger;
             //_mailService = mailService;
             _ProjectInfoRepository = ProjectInfoRepository;
+            _mapper = mapper;
         }
 
         [HttpGet]
