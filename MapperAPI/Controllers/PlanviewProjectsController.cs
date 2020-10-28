@@ -132,7 +132,7 @@ namespace MapperAPI.Controllers
                 return NotFound();
             }
 
-            var finalPlanViewProject = _mapper.Map<Entities.PlanViewProject>(PlanViewProject);
+            var finalPlanViewProject = _mapper.Map<PlanViewProject>(PlanViewProject);
 
             _ProjectInfoRepository.AddPlanViewProjectForProject(projectUid, finalPlanViewProject);
 

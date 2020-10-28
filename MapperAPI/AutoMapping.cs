@@ -13,8 +13,15 @@ namespace MapperAPI
     {
         public AutoMapping()
         {
-            CreateMap<AuthorizedPlanViewProjectDto, AuthorizedPlanViewProject>(); // means you want to map from User to UserDTO
+            //CreateMap<AuthorizedPlanViewProjectDto, AuthorizedPlanViewProject>();  
             CreateMap<AuthorizedPlanViewProject, AuthorizedPlanViewProjectDto>();
+            CreateMap<PlanViewProject, PlanViewProjectDto>();
+            CreateMap<Project, ProjectDto>();
+            CreateMap<PlanViewProject, PlanViewProjectDto>();
+            CreateMap<PlanViewProject, PlanViewProjectsForCreationDto>();
+            CreateMap<PlanViewProjectsForCreationDto, PlanViewProject>(); 
+
+
         }
     }
 }
