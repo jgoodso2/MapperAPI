@@ -3,10 +3,24 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MapperAPI.Migrations
 {
-    public partial class one : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+               name: "AdminUser",
+               columns: table => new
+               {
+                   Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                   Account34 = table.Column<string>(maxLength: 50, nullable: false)
+               },
+               constraints: table =>
+               {
+                   table.PrimaryKey("PK_AdminUsers", x => x.Id);
+               });
+
+
             migrationBuilder.CreateTable(
                 name: "AuthorizedPlanViewProjects",
                 columns: table => new
@@ -14,7 +28,11 @@ namespace MapperAPI.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ppl_Code = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
+                    plan_id = table.Column<string>(nullable: true),
+                    proj_mgr = table.Column<string>(nullable: true),
+                    projectSponsor = table.Column<string>(nullable: true),
+                    alt_pm = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

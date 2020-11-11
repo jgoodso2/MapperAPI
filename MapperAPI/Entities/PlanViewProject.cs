@@ -9,7 +9,7 @@ namespace MapperAPI.Entities
     public class PlanViewProject
     {
         [Required]
-        [MaxLength(50)]
+     
         public string ProjectName { get; set; }
 
         [Key]

@@ -13,7 +13,7 @@ namespace MapperAPI.Entities
         public Guid ProjectGuid { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        
         public string ProjectName { get; set; }
 
         public ICollection<PlanViewProject> PlanViewProjects { get; set; }

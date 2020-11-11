@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MapperAPI.Migrations
 {
     [DbContext(typeof(MapperContext))]
-    [Migration("20201022214227_one")]
-    partial class one
+    [Migration("20201111172050_111120_1")]
+    partial class _111120_1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,22 @@ namespace MapperAPI.Migrations
                 .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("MapperAPI.Entities.AdminUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("account34")
+                        .HasColumnType("nvarchar(10)")
+                        .HasMaxLength(10);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AdminUsers");
+                });
 
             modelBuilder.Entity("MapperAPI.Entities.AuthorizedPlanViewProject", b =>
                 {
@@ -31,7 +47,19 @@ namespace MapperAPI.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("alt_pm")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("plan_id")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ppl_Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("proj_mgr")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("projectSponsor")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -51,8 +79,7 @@ namespace MapperAPI.Migrations
 
                     b.Property<string>("ProjectName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ppl_Code")
                         .HasColumnType("nvarchar(max)");
@@ -71,8 +98,7 @@ namespace MapperAPI.Migrations
 
                     b.Property<string>("ProjectName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProjectGuid");
 

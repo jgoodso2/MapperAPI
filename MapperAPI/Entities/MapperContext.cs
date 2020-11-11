@@ -11,17 +11,19 @@ namespace MapperAPI.Entities
         public MapperContext(DbContextOptions<MapperContext> options)
      : base(options)   //base class already has a constructor we like, so use it
         {
-            //Database.Migrate();
+            Database.Migrate();
         }
 
         public DbSet<Project> Projects { get; set; }
         public DbSet<PlanViewProject> PlanViewProjects { get; set; }
 
-        public DbSet<AuthorizedPlanViewProject> AuthorizedPlanViewProjects { get; set; }
+        public DbSet<AuthorizedPlanViewProject> AuthorizedPlanViewProjects { get; set; } 
+
+        public DbSet<AdminUser> AdminUsers { get; set; }
 
         public MapperContext() {    // another constructor
         }   
 
-
+        
     }
 }

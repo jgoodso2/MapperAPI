@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using MapperAPI.Entities; 
-using MapperAPI.Data;
+//using MapperAPI.Data;
 using MapperAPI.Services; 
 using AutoMapper; 
 
