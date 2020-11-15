@@ -15,5 +15,12 @@ namespace MapperAPI.Models
 
         [MaxLength(7)]
         public string ppl_Code { get; set; }
+
+        [MaxLength(12)]
+        public string mappedBy34 { get; set; }
+
+        [MaxLength(50)]
+        public string mappedByName { get; set; }
     }
 }
+ 

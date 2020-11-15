@@ -17,6 +17,7 @@ namespace MapperAPI
             CreateMap<AuthorizedPlanViewProject, AuthorizedPlanViewProjectDto>();
             CreateMap<PlanViewProject, PlanViewProjectDto>();
             CreateMap<Project, ProjectDto>();
+            CreateMap<ProjectDto, Project>();
             CreateMap<PlanViewProject, PlanViewProjectDto>();
             CreateMap<PlanViewProject, PlanViewProjectsForCreationDto>();
             CreateMap<PlanViewProjectsForCreationDto, PlanViewProject>();

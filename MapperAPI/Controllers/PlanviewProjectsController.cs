@@ -59,7 +59,7 @@ namespace MapperAPI.Controllers
 
             }
         }
-
+        //Get Mapped Projects for a given PerView Project
         [HttpGet("{projectUid}/PlanViewProjects")]
         public IActionResult GetPlanViewProjects(Guid projectUid)
         {
@@ -185,6 +185,10 @@ namespace MapperAPI.Controllers
 
             _ProjectInfoRepository.AddPlanViewProjectForProject(projectUid, finalPlanViewProject);
 
+
+            //todo check to see if the planview project has already been mapped
+            // code here
+            //  
             if (!_ProjectInfoRepository.Save())
             {
                 return StatusCode(500, "A problem happened while handling your request.");

@@ -1,4 +1,4 @@
-﻿/*
+﻿
 using MapperAPI.Services;
 using MapperAPI.Models;
 using AutoMapper; 
@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 
 namespace MapperAPI.Controllers
 {
-     
+    [ApiController]
+    [Route("api/Projects")]
+
     public class ProjectsController : ControllerBase
     {
         private IProjectInfoRepository _ProjectInfoRepository;
@@ -123,4 +125,3 @@ namespace MapperAPI.Controllers
     }
 }
 
-*/
