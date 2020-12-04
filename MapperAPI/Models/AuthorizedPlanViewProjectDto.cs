@@ -11,5 +11,11 @@ namespace MapperAPI.Models
         public string ppl_Code { get; set; }
 
         public string Name { get; set; }
+
+        public string plan_id { get; set; }
+
+        public string proj_mgr { get; set; } 
+        public string projectSponsor { get; set; }
+
     }
 }
