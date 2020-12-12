@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "MapperAPIContextboo",
+      "suggestion": "true",
+      "ignored": "true"
+    },
+    "mssql4": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId1')]/resourceGroups/[parameters('resourceGroup1')]/providers/Microsoft.Sql/servers/sampleapiserver/databases/Mapper",
+      "type": "mssql.azure",
+      "connectionId": "Myconnection",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql3": {
+      "type": "mssql",
+      "connectionId": "AzureSQLDB",
+      "suggestion": "true",
+      "ignored": "true"
+    }
+  }
+}
