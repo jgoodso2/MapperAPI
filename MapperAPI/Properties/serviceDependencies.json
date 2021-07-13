@@ -1,14 +1,8 @@
 {
   "dependencies": {
-    "mssql2": {
+    "mssql1": {
       "type": "mssql",
-      "connectionId": "DefaultConnection",
-      "suggestion": "true",
-      "ignored": "true"
-    },
-    "mssql4": {
-      "type": "mssql",
-      "connectionId": "Myconnection"
+      "connectionId": "DefaultConnection"
     }
   }
 }
